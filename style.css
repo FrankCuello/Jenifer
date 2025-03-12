@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    /* Nueva tipografía elegante y legible */
+    font-family: 'Playfair Display', serif;
+    background-color: #0a0a1a; /* Fondo oscuro para un toque mágico y tecnológico */
+    color: #f0f0f0; /* Texto claro para contrastar con el fondo oscuro */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Para posicionar las estrellas relativas al body */
+}
+
+/* Fondo de estrellas */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><circle cx="3" cy="3" r="1" fill="rgba(255,255,255,0.3)" /></svg>'), #0a0a1a; /* Patrón de estrellas sutil */
+    animation: twinkle 10s linear infinite; /* Animación sutil de parpadeo */
+    opacity: 0.7; /* Reduce la opacidad para que no sea demasiado intrusivo */
+    z-index: -1; /* Detrás de todo el contenido */
+}
+
+@keyframes twinkle {
+    50% {
+        opacity: 0.9;
+    }
+}
+
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+.message-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+}
+
+h1 {
+    font-size: 3.5em; /* Un poco más grande */
+    margin-bottom: 25px;
+    color: #e0f7fa; /* Color aguamarina claro para el nombre */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto para resaltar */
+}
+
+p {
+    font-size: 1.5em; /* Un poco más grande */
+    line-height: 1.7;
+    color: #dcedc8; /* Verde claro suave para el mensaje */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto para resaltar */
+}
+
+.flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.flower {
+    position: absolute;
+    color: #ffcdd2; /* Rosa más suave para las flores que caen */
+    font-size: 22px; /* Ligeramente más grandes */
+    top: -20px;
+    animation: fall linear infinite, glow 2s linear infinite alternate; /* Añadida animación de brillo */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes glow {
+    to {
+        opacity: 0.5; /* Flores ligeramente transparentes al "brillar" */
+    }
+}
+
+/* Decoraciones de las esquinas (Estrellas brillantes) */
+.corner-decoration {
+    position: fixed;
+    font-size: 50px; /* Más grandes y llamativas */
+    color: #b3e5fc; /* Azul claro brillante para las esquinas */
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para que resalten más */
+    animation: pulse 2s linear infinite alternate; /* Animación de pulsación suave */
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.2); /* Ligeramente más grande al "pulsar" */
+        opacity: 0.8;
+    }
+}
+
+
+.top-left {
+    top: 30px;
+    left: 30px;
+}
+
+.top-right {
+    top: 30px;
+    right: 30px;
+}
+
+.bottom-left {
+    bottom: 30px;
+    left: 30px;
+}
+
+.bottom-right {
+    bottom: 30px;
+    right: 30px;
+}
